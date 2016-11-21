@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_sanck_bar:
                 final Snackbar snackbar = Snackbar.make(mSnackBar, "Click the SnackBar", Snackbar.LENGTH_SHORT);
                 snackbar.getView().setBackgroundColor(ContextCompat.getColor(this, R.color.orange));
-                setSnackbarActionTextColor(snackbar, R.color.colorAccent);
-                snackbar.setAction("hello", new View.OnClickListener() {
+                setSnackbarActionTextAllCaps(snackbar, false);
+                snackbar.setAction("Cancel", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 //                        if (snackbar != null && snackbar.isShown()) {
@@ -43,23 +43,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         snackbar1.show();
                     }
                 })
-                        .setText("Hello")
+                        .setText("Hello")//set the message text
                         .setActionTextColor(ContextCompat.getColor(this, R.color.colorAccent))
                         .show();
                 break;
         }
     }
 
+    /**
+     * set the message text color
+     *
+     * @param snackbar
+     * @param color the text color
+     */
     public static void setSnackbarMessageTextColor(Snackbar snackbar, int color) {
         View view = snackbar.getView();
         TextView textView = (TextView) view.findViewById(R.id.snackbar_text);
         textView.setTextColor(color);
     }
 
-    public static void setSnackbarActionTextColor(Snackbar snackbar, int color) {
+    /**
+     * set the action text whether all caps
+     *
+     * @param snackbar the sanckbar
+     * @param allCaps  boolean allCaps,true or false
+     */
+    public static void setSnackbarActionTextAllCaps(Snackbar snackbar, boolean allCaps) {
         View view = snackbar.getView();
         TextView textView = (TextView) view.findViewById(R.id.snackbar_action);
-        textView.setAllCaps(false);
-        textView.setTextColor(color);
+        textView.setAllCaps(allCaps);
     }
 }
