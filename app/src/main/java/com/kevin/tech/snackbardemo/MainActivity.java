@@ -1,5 +1,6 @@
 package com.kevin.tech.snackbardemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -15,7 +16,7 @@ import android.widget.Toast;
  * Describe：SnackBarDemo
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mToast, mSnackBar;
+    private Button mToast, mSnackBar, mBtnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         mToast = (Button) findViewById(R.id.btn_toast);
         mSnackBar = (Button) findViewById(R.id.btn_snack_bar);
+        mBtnNext = (Button) findViewById(R.id.btn_next);
         mToast.setOnClickListener(this);
         mSnackBar.setOnClickListener(this);
+        mBtnNext.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setText("Hello")//set the message text
                         .setActionTextColor(ContextCompat.getColor(this, R.color.colorAccent))
                         .show();
+                break;
+            case R.id.btn_next:
+                startActivity(new Intent(this, NextActivity.class));
+                break;
+            default:
                 break;
         }
     }

@@ -12,9 +12,8 @@ import android.widget.Button;
 /**
  * Created by Kevin on 2016/11/21.
  * Blog:http://blog.csdn.net/student9128
- * Describe：
+ * Describe：the NextActivity
  */
-
 public class NextActivity extends AppCompatActivity {
     private CoordinatorLayout mCoordinatorLayout;
     private Button mButton;
