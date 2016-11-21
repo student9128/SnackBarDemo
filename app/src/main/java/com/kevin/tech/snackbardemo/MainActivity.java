@@ -50,12 +50,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /**
+     * set the message text attributes
+     *
+     * @param snackbar
+     * @param color
+     */
     public static void setSnackbarMessageTextColor(Snackbar snackbar, int color) {
         View view = snackbar.getView();
         TextView textView = (TextView) view.findViewById(R.id.snackbar_text);
         textView.setTextColor(color);
     }
 
+    /**
+     * set the action text attributes
+     *
+     * @param snackbar
+     * @param color
+     */
     public static void setSnackbarActionTextColor(Snackbar snackbar, int color) {
         View view = snackbar.getView();
         TextView textView = (TextView) view.findViewById(R.id.snackbar_action);
