@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Created by Kevin on 2016/11/21.
+ * Blog:http://blog.csdn.net/student9128
+ * Describe：SnackBarDemo
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mToast, mSnackBar;
 
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * set the message text color
      *
      * @param snackbar
-     * @param color the text color
+     * @param color    the text color
      */
     public static void setSnackbarMessageTextColor(Snackbar snackbar, int color) {
         View view = snackbar.getView();
