@@ -18,7 +18,7 @@
         android:textColor="@color/white"/>
 
     <Button
-        android:id="@+id/btn_sanck_bar"
+        android:id="@+id/btn_snack_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

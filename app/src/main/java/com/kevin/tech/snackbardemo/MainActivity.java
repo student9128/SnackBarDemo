@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mToast = (Button) findViewById(R.id.btn_toast);
-        mSnackBar = (Button) findViewById(R.id.btn_sanck_bar);
+        mSnackBar = (Button) findViewById(R.id.btn_snack_bar);
         mToast.setOnClickListener(this);
         mSnackBar.setOnClickListener(this);
     }
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_toast:
                 Toast.makeText(this, "Click the Toast", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.btn_sanck_bar:
+            case R.id.btn_snack_bar:
                 final Snackbar snackbar = Snackbar.make(mSnackBar, "Click the SnackBar", Snackbar.LENGTH_SHORT);
                 snackbar.getView().setBackgroundColor(ContextCompat.getColor(this, R.color.orange));
                 setSnackbarActionTextAllCaps(snackbar, false);
