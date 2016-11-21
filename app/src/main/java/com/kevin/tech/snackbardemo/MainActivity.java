@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 })
                         .setText("Hello")//set the message text
-                        .setActionTextColor(ContextCompat.getColor(this, R.color.colorAccent))
+                        .setActionTextColor(ContextCompat.getColor(this, R.color.green))
                         .show();
                 break;
             case R.id.btn_next:
