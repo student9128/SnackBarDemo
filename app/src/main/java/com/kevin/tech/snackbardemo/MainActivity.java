@@ -79,12 +79,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * set the action text attributes
      *
      * @param snackbar
-     * @param color
+     * @param allCaps
      */
-    public static void setSnackbarActionTextColor(Snackbar snackbar, int color) {
+    public static void  setSnackbarActionTextAllCaps(Snackbar snackbar, boolean allCaps) {
         View view = snackbar.getView();
         TextView textView = (TextView) view.findViewById(R.id.snackbar_action);
         textView.setAllCaps(false);
-        textView.setTextColor(color);
     }
 }
